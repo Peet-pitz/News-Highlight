@@ -3,12 +3,11 @@ class Source:
     Movie class to define movie object
     """
 
-    def __init__(self, id, name, urlToImage):
+    def __init__(self, id, name):
 
         self.id = id
         self.name = name
-        self.urlToImage = urlToImage
-        
+          
 
 
 class Article:

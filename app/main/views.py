@@ -1,28 +1,20 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template
 from . import main
 from ..requests import get_news, get_news
+from ..models import Source, Article
 
 
 # Review = reviews.Review
 
 # views
-# @main.route('/')
-# def index():
-
-#     # print("string user  " + upcoming_movie)
-#     cnn = get_news('cnn')
-#     print(cnn)
-#     bbc_sport = get_news('bbc_sport')
-#     buzz_feed = get_news('buzz_feed')
-
-#     title = 'Home - welcome '
-
-#     search_news = request.args.get('news_query')
-
-#     if search_movie:
-#         return redirect(url_for('.search', movie_name=search_movie))
-#     else:
-#         return render_template('index.html', title=title, cnn=cnn,  bbc_sport=bbc_sport, buzz_feed=buzz_feed)
+@main.route('/')
+def index() :
+    sources = get_news('general')
+    print(sources)
+    # bbc_sport = get_news('bbc_sport')
+    # buzz_feed = get_news('buzz_feed')
+    title = 'Home - welcome '
+    return render_template('index.html', title=title, sources=sources)
 
 # @main.route('/search/<movie_name>')
 # def search(movie_name):
@@ -42,7 +34,7 @@ def news(id):
     View news page function that returns the news details page and its data
     '''
     news= get_news(id)
-    title = f' {news.name}'
+    title = 'news'
    
 
     return render_template('news.html', title=title, news=news)
