@@ -24,4 +24,4 @@ class Article:
 
     
 
-return response
+  
