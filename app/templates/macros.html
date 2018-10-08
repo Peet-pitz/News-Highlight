@@ -1,16 +1,20 @@
- <!-- displaying movie list macro -->
- {% macro displayNewsList(news_list) %}
+ <!-- displaying news source list macro -->
+ {% macro displaySourceList(news_list) %}
 
- {% for news in news_list %}
+ {% for source in news_list %}
 
- <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+ <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 news-card">
      <li class="text-center">
-         <p>{{news.name}}</p>
+         <a href="/articles/{{source.id}}" id="header"></a> <p>{{source.name}}</p>
+         <p>{{source.description}}</p>
+         
      </li>
+     <a href="{{source.url}}" class="btn btn-sm btn-danger">Click</a>
  </div>
  {% endfor %}
 {% endmacro %}
-<!-- displaying movie review macro -->
+
+<!-- displaying news article macro -->
 <!-- {% macro displayReviews(review_list)%}
  {% for review in review_list %}
 

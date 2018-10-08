@@ -9,29 +9,10 @@
             <div class = "col-xm-6 col-sm-6 col-md-6 col-lg-6 posterpath">
                 <img src="{{ news.urlToImage }}" alt="{{ news.title }} poster" class="img-responsive">
             </div>
-            <!-- <div class = "col-xm-6 col-sm-6 col-md-6 col-lg-6 news_details">
-
-                <h3>{{ news.title }}</h3>
-
-                <p class = "overview"> {{movie.overview }}</p>
-                <p class ="comments"> <b>{{movie.vote_average}}</b> - <i>{{movie.vote_count}} votes </i> </p>
-                <a class="comments" href="/news/review/new/{{news.id}}"> Write a new comment </a>
-
-            </div> -->
+            
 
         </div>
-        <!-- <div class="row">
-            <h1>Reviews</h1>
-            <hr>
-            {% if reviews %}
-                {{ macro.displayReviews(reviews) }}
-            {% else %}
-                <h3 class="text-center"> Movie has no reviews </h3>
-                <a  class= "btn btn-success btn-lg" class="text-center" href="/movie/review/new/{{movie.id}}"> Write a new review </a>
-            {% endif%}
-
-
-        </div> -->
+        
 
     </div>
     {%endblock%}
