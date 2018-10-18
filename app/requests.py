@@ -13,8 +13,8 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # getting api key c
 api_key = None
 
-# # getting the news based url c
-# base_url = None
+# getting the news based url c
+base_url = None
 
 # def configure_request(app):
 #     global api_key,base_url
