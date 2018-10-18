@@ -1,28 +1,28 @@
-class Source:
-    """
-    Source class to define news object
-    """
+# class Source:
+#     """
+#     Source class to define news object
+#     """
 
-    def __init__(self, id, name,description,url,category):
+#     def __init__(self, id, name,description,url,category):
 
-        self.id = id
-        self.name = name
-        self.description = description
-        # self.url = url
-        # self.category = category
+#         self.id = id
+#         self.name = name
+#         self.description = description
+#         # self.url = url c
+#         # self.category = category c
           
 
 
-class Article:
-    all_articles = []
+# class Article:
+#     all_articles = []
 
-    def __init__(self, author, title, description, urlToImage, publishedAt, content):
-        self.movie_id = author
-        self.title = title
-        self.description = description
-        self.urlToImage = urlToImage
-        self.publishedAt = publishedAt
-        self.content = content
+#     def __init__(self, author, title, description, urlToImage, publishedAt, content):
+#         self.movie_id = author
+#         self.title = title
+#         self.description = description
+#         self.urlToImage = urlToImage
+#         self.publishedAt = publishedAt
+#         self.content = content
 
     
 
