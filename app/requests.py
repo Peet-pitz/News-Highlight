@@ -22,11 +22,11 @@ def configure_request(app):
     base_url = app.config['NEWS_API_BASE_URL']
 
 
-def get_news(category):
+def get_news():
     """
     function that gets the json response to our url request
     """
-    get_news_url = base_url.format(category,api_key)
+    get_news_url = base_url.format(api_key)
 
     with urllib.request.urlopen(get_news_url) as url :
         get_news_data = url.read()
@@ -67,10 +67,10 @@ def process_results(news_list):
         id = news_item.get('id')
         name = news_item.get('name')
         description = news_item.get('description')
-        url = news_item.get('url')
-        category = news_item.get('category')
+        # url = news_item.get('url')
+        # category = news_item.get('category')
               
-        news_object = Source(id, name,description,url,category)
+        news_object = Source(id, name,description)
         news_results.append(news_object)
 
     return news_results

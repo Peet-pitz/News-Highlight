@@ -4,11 +4,11 @@ class Config() :
     """
     Gereral configuration of the parent class
     """
-    NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?category={}&apiKey={}'
+    NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?sources={}&apiKey={}'
     NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-class ProConfig(Config) :
+class ProdConfig(Config) :
     """
     production configuration of child class 
 
@@ -27,7 +27,7 @@ class DevConfig(Config) :
     DEBUG = True
 config_options = {
 'development':DevConfig,
-'production':ProConfig
+'production':ProdConfig
 }
 
 
