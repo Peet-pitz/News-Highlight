@@ -1,17 +1,17 @@
-# # from app import app c
-# import urllib.request,json
+# from app import app c
+import urllib.request,json
 
-# # import json c
-# from .models import Source
-# from .models import Article
+# import json c
+from .models import Source
+from .models import Article
 
-# import ssl
-# ssl._create_default_https_context = ssl._create_unverified_context
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 
-# # getting api key c
-# api_key = None
+# getting api key c
+api_key = None
 
 # # getting the news based url c
 # base_url = None
