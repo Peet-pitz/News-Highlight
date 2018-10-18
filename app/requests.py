@@ -44,19 +44,19 @@ def get_news():
 
 
 
-# def process_results(news_list):
+def process_results(news_list):
 
-#     news_results = []
-#     for news_item in news_list:
-#         id = news_item.get('id')
-#         name = news_item.get('name')
-#         description = news_item.get('description')
+    news_results = []
+    for news_item in news_list:
+        id = news_item.get('id')
+        name = news_item.get('name')
+        description = news_item.get('description')
        
               
-#         news_object = Source(id, name,description)
-#         news_results.append(news_object)
+        news_object = Source(id, name,description)
+        news_results.append(news_object)
 
-#     return news_results
+    return news_results
 
 
 
