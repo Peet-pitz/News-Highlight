@@ -8,14 +8,14 @@ class Config() :
     NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# class ProdConfig(Config) :
-#     """
-#     production configuration of child class 
+class ProdConfig(Config) :
+    """
+    production configuration of child class 
 
-#     Args :
-#         config - the parent configuration class with  general configuration settings
-#     """
-#     pass
+    Args :
+        config - the parent configuration class with  general configuration settings
+    """
+    pass
 
 # class DevConfig(Config) :
 #     """
